@@ -1,0 +1,71 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class bst
+{
+	node top;
+	
+	class node{
+		int data;
+		node left;
+		node right;
+		node(int d){
+			left = null;
+			right = null;
+			data = d;
+		}
+	};
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+	}
+	
+	public static node search(node top, int key){
+		if(node ==nul || node.data = key){
+			return node;
+		}
+		if(key >= node.data){
+			return search(node.right);	
+		}
+		else{
+			returm search(node.left);
+		}
+	}
+	
+	public static node insert(node top, int value){
+		if(top== null){
+			top = new node(value);
+		}
+		if(key > top.data){
+			top.right = insert(top.right.data);
+		}
+		else{
+			top.left = insert(top.left.data);
+		}
+	}
+	
+	public static void sale(int longN, int shortN, int longP, int shortP, int custInpt){
+		if(longP == 0 || shortP == 0){
+			System.out.println("invalid price");
+		}
+		int noOfLongN =custInpt / longP;
+		int balance = custInpt - noOfLong * longP;
+		if(noOfLongP <= longN){
+			System.out.println("no Of long note books given: "+ noOfLongN + " balnce returned: "+ balance);
+			if(longN ==0 && balance !=0){
+				int noOfShortN = balance / shortP;
+				balance = balance - shortP*noOfShortN; 
+				System.out.println("no of short note books given: "+ noOfShortN + "balance returned: " + balance);
+			}
+		}
+		else{
+				int noOfShortN = balance / shortP;
+				balance = custInpt - shortP*noOfShortN; 
+				System.out.println("no of short note books given: "+ noOfShortN + "balance returned: " + balance);
+		}
+	}
+}
